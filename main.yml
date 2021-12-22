@@ -11,10 +11,10 @@
         update_cache: true
         cache_valid_time: 3600
         upgrade: true
-  
+
   tasks:
     - name: install prereq packages
-      import_tasks: tasks/packages.yml  
+      import_tasks: tasks/packages.yml
 
   handlers:
     - name: Restart Apache
@@ -24,7 +24,7 @@
 
     - name: Restart Nginx
       service:
-        name:nginx
+        name: nginx
         state: restarted
 
     - name: Reboot
